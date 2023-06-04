@@ -53,8 +53,28 @@ const ApiPokemon = () => {
     
 
   return (
-    <div>ApiPokemon</div>
-  )
-}
+    <div className="centered-container">
+      <h1>Pokemon</h1>
+      {!mostrarPokemon && (
+        <button onClick={traerPokemonsClick}>Traer Pokemons</button>
+      )}
+      {mostrarPokemon && (
+        <>
+          <button onClick={siguiente}>Siguiente</button>
+          <button onClick={atras}>Atrás</button>
+          {pokemonDetalles.map((pokemonDetalle, index) => (
+            <div className="container" key={index}>
+              <h3>{capitalizar(pokemonDetalle.name)}</h3>
+              <img
+                src={pokemonDetalle.sprites.front_default}
+                alt={pokemonDetalle.name}
+              />
+            </div>
+          ))}
+        </>
+      )}
+    </div>
+  );
+};
 
 export default ApiPokemon
