@@ -47,6 +47,10 @@ const ApiPokemon = () => {
           setPaginacion(paginacion - 1);
         }
       };
+    const capitalizar = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+      };
+    
 
   return (
     <div>ApiPokemon</div>
