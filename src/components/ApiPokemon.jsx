@@ -34,6 +34,20 @@ const ApiPokemon = () => {
         }
       };
 
+      const traerPokemonsClick = () => {
+        setMostrarPokemon(true);
+      };
+    
+      const siguiente = () => {
+        setPaginacion(paginacion + 1);
+      };
+    
+      const atras = () => {
+        if (paginacion > 1) {
+          setPaginacion(paginacion - 1);
+        }
+      };
+
   return (
     <div>ApiPokemon</div>
   )
